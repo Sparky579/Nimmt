@@ -1,0 +1,22 @@
+directories:
+  output: release
+  buildResources: assets
+appId: com.test
+productName: 打包
+includeSubNodeModules: true
+extraFiles:
+  - filter:
+      - ./dist/assets/**
+copyright: Copyright © 2023
+mac:
+  category: public.app-category.utilities
+  icon: public/icons/icon.icns
+win: {}
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+files:
+  - filter:
+      - dist/**/*
+      - electron/**/*
+electronVersion: 13.6.9
